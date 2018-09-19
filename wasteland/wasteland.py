@@ -2,11 +2,12 @@
 import time
 import random
 
-class Characters():
-    main_char = {'name': "...", 'hp': 100, 'atk': 10, 'def': 20,}
-    comp_char = {'name': "Stranger", 'hp': 100, 'atk': 10, 'def': 20,}
-    #-----------------------------------------------------------------------
-    main_char_inv = {'Torch': 1, 'Box of Matches': 10, 'Knife': 1, 'Box of Crackers': 10,}
+unvalid = "(Not a valid command.)"
+
+main_char = {'name': "...", 'hp': 100, 'atk': 10, 'def': 20,}
+comp_char = {'name': "Stranger", 'hp': 100, 'atk': 10, 'def': 20,}
+#-----------------------------------------------------------------------
+main_char_inv = {'Torch': 1, 'Box of Matches': 10, 'Knife': 1, 'Box of Crackers': 10,}
 
 class Environment():
     #denne class vælger start biome for spilleren, og om der er træer og/eller vand omkring
@@ -39,6 +40,16 @@ class FirstScene():
         print("(You slowly open your eyes, and you see a stranger looking right at you.)")
         time.sleep(1)
         print(x + ": I don't think it's a good idea to sleep out here, who knows who might come by.")
-        print(x + ": Mind if I join you on your travels?")
+        print(x + ": May I join you on your travels?")
         answer_fstscn = input("(What do you say? Y for 'yes', N for 'no')")
-        if answer_fstscn == ""
+        if answer_fstscn == "Y" or "y":
+            time.sleep(0.5)
+            print(x + ": Great! You lead the way.")
+        elif answer_fstscn == "N" or "n":
+            time.sleep(1)
+            print(x + ": Are you sure? It's dangerous to travel alone. Well, I'm coming with you anyway.")
+        else:
+            print(unvalid)
+    firstscene(comp_char[0])
+
+FirstScene()
