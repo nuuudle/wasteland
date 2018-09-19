@@ -53,3 +53,6 @@ class FirstScene():
     firstscene(comp_char[0])
 
 FirstScene()
+
+
+#yeeeeet
