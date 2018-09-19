@@ -19,7 +19,7 @@ def game_start_chardev():
     time.sleep(1.5)
     print("Stranger" + ": Nice wagon you got there, mind if I join ya?")
     time.sleep(0.5)
-    print("--------------------------------------------")
+    #print("--------------------------------------------")
 
     answer_game_start = input("(Press Y for 'yes' and N for 'no')")
     if answer_game_start == "N" or "n":
